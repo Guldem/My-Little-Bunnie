@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph" app:startDestination="@id/homeFragment">
+
+
+    <fragment android:id="@+id/homeFragment" android:name="nl.guldem.mylittlebunnie.ui.home.HomeFragment"
+              android:label="HomeFragment"
+              tools:layout="@layout/fragment_home"
+    >
+        <action android:id="@+id/action_homeFragment_to_videoFragment" app:destination="@id/videoFragment"
+                app:enterAnim="@anim/anim_fade_in" app:exitAnim="@anim/anim_fade_out"
+                app:popEnterAnim="@anim/anim_fade_in" app:popExitAnim="@anim/anim_fade_out"/>
+    </fragment>
+    <fragment android:id="@+id/videoFragment" android:name="nl.guldem.mylittlebunnie.ui.video.VideoFragment"
+              android:label="VideoFragment" tools:layout="@layout/exo_player_control_view">
+        <argument android:name="source" app:argType="nl.guldem.mylittlebunnie.ui.video.VideoArgs"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:controller_layout_id="@layout/player_controls"
+    />
+
+    <LinearLayout
+            android:id="@+id/overlay_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/beige"
+            android:layout_gravity="center">
+
+        <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/suprise_present_image"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:lottie_fileName="present_1.json"
+                app:lottie_loop="false"
+                app:lottie_autoPlay="false"
+                android:layout_gravity="center"
+        />
+
+    </LinearLayout>
+
+
+</FrameLayout>

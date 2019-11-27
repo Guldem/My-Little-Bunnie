@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: "com.github.ben-manes.versions"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "nl.guldem.mylittlebunnie"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    signingConfigs{
+        normal {
+            keyAlias 'bunniekey'
+            keyPassword 'bunnie'
+            storeFile file('../bunniekey.jks')
+            storePassword 'bunnie'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.normal
+            archivesBaseName = "MyLittleBunnie"
+        }
+    }
+    compileOptions {
+        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+
+    implementation deps.kotlin
+
+    addDeps(dependencies, deps.room)
+    addDeps(dependencies, deps.exo)
+    addDeps(dependencies, deps.nav)
+    addDeps(dependencies, deps.koin)
+    addDeps(dependencies, deps.coroutine)
+
+    implementation deps.support
+    implementation deps.appcompat
+    implementation deps.androidx
+    implementation deps.constraint
+    implementation deps.work
+    implementation deps.lifecycle
+    implementation deps.joda
+    implementation deps.lottie
+
+}
