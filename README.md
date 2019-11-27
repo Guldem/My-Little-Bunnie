@@ -1,4 +1,4 @@
-![](https://github.com/Guldem/My-Little-Bunnie/workflows/Android%20CI/badge.svg)
+![](https://github.com/Guldem/My-Little-Bunnie/workflows/Android%20Build/badge.svg)
 
 # MyLittleBunnie
 This app was made for friends when they had their first child. 
