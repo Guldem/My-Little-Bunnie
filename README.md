@@ -1,3 +1,5 @@
+![](https://github.com/Guldem/My-Little-Bunnie/workflows/Android%20CI/badge.svg)
+
 # MyLittleBunnie
 This app was made for friends when they had their first child. 
 When we (me and my girlfriend) heard that our good friends where expecting their first child the idea was also quickly born for a surprise app.
